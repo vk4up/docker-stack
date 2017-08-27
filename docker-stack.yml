@@ -17,7 +17,7 @@ services:
   mysql:
     image: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD: password
+      - MYSQL_ROOT_PASSWORD=password
     networks:
       - frontend
     deploy:
@@ -38,4 +38,4 @@ services:
         constraints: [node.role == manager]
 
 networks:
-  frontend:    
+  frontend:
